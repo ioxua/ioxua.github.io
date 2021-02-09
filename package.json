@@ -4,7 +4,8 @@
   "description": "- criar projeto com SASS/TS/Gulp - criar um crud de Users, com dashboard :)",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build:clean && gulp build:sass && gulp build:pug"
+    "build": "gulp build:clean && gulp build:sass && gulp build:pug",
+    "serve": "npm run build && node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "static-server": "^2.2.1"
   }
 }
