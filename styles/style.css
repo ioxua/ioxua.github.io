@@ -1,0 +1,11 @@
+h1 {
+  font-size: 21px; }
+
+p {
+  font-size: 14px; }
+  p h1 {
+    font-size: 15.4px; }
+
+header {
+  background-color: "red";
+  height: 55px; }
