@@ -18,7 +18,10 @@ const buildSASS = () => {
 }
 
 const buildPug = () => {
-  return gulp.src('pug/**/*.pug')
+  return gulp.src([
+    'pug/**/*.pug',
+    '!pug/**/_*.pug',
+  ])
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest(distDir))
 }
@@ -30,11 +33,9 @@ gulp.task('build:pug', buildPug)
 gulp.task('build', () => {
   return gulp.series(
     buildClean,
-    buildSASS,
-    buildPug,
-    // gulp.parallel(
-    //   buildSASS,
-    //   buildPug,
-    // ),
+    gulp.parallel(
+      buildSASS,
+      buildPug,
+    ),
   )
 })
