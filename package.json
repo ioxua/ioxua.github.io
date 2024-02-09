@@ -4,7 +4,8 @@
   "description": "lorem ipsum dolor sit amet",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   },
   "author": "",
   "license": "ISC",
